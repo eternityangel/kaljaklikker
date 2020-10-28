@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background-color: #646464;
+}
+
+header.section-clicker {
+    height: 120vh;
+    background-color: #373737;
+}
+div.menu {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgb(77, 77, 77);
+  }
+  
+div.click {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+img {
+    float: left;
+    margin-right: 20px;
+}
+a.link {
+    margin-left: 30px;
+    float: left;
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;   
+    border-bottom: 0px solid salmon;
+}
+a.link-right {
+    margin-right: 27px;
+    float: right;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-decoration: none;   
+    border-bottom: 0px solid salmon;
+}
+a.link:hover {
+    border-bottom: 2px solid salmon;
+}
