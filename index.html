@@ -1,14 +1,56 @@
-<!DOCTYPE html>
-<html>
-  
-  <title>Kalja Klikkeri</title><link rel="shortcut icon" href="https://mb.cision.com/Public/147/9561698/82be76022b5a5644_org.jpg" type="image/x-icon">
-  
-  <head>
-  </head>
-  <body style="text-align: center">
-    <div style="position: absolute; top: 45%;left: 50%;transform: translate(-50%, -50%);">
-      <h1>Building in process!</h1>
-      <h3 style="color: grey;">This site is not ready yet, but we'll be online soon!</h3>
+<!DOCTYPE htmL>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {
+    margin: 0;
+    background-color: #0F2E2D;
+}
+div.click {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p {
+    left: 60%;
+    position: absolute;
+    color: white;
+}
+</style>
+</head>
+<body>
+    <p id="score">Score: 0</p><br>
+    <p id="buypertti">Buy Pertti (3 Score) lvl: 0</p>
+    <div class="click">
+        <img id="gid" src="KarhuKalja.png" width="200px">
     </div>
-  </body>
-</html>
+    <script type="text/javascript">
+        let score = 0;
+        let amount = 3;
+        let perttilevel = 0;
+        function setScore() {
+            score = score + 1;
+            document.getElementById("score").innerHTML = "Score: " + score;
+            document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
+        }
+        function buypertti() {
+            if (score >= amount) {
+                
+                score -= amount;
+                amount = amount * 2;
+                document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
+                perttilevel = perttilevel + 1;
+                setInterval(setScore, 500);
+                setScore();
+            }
+            
+        }
+        document.getElementById("gid").addEventListener("click", setScore);
+        document.getElementById("buypertti").addEventListener("click", buypertti);
+        document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
+    </script>
+
+</body></html>
