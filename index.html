@@ -37,7 +37,7 @@ p {
             document.getElementById("score").innerHTML = "Score: " + score;
             document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
             document.getElementById("gid").style.width = "180px";
-            setTimeout(clicka, 100);
+            setTimeout(clicka, 500);
             
         }
         function clicka() {
@@ -50,7 +50,7 @@ p {
                 amount = amount * 2;
                 document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
                 perttilevel = perttilevel + 1;
-                setInterval(setScore, 500);
+                setInterval(setScore, 1000);
                 setScore();
             }
             
