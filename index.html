@@ -13,7 +13,6 @@ div.click {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
 }
 p {
     left: 60%;
@@ -29,6 +28,7 @@ p {
         <img id="gid" src="RarhuEiCopyright.png">
     </div>
     <script type="text/javascript">
+        document.getElementById("gid").style.width = "200px";
         let score = 0;
         let amount = 3;
         let perttilevel = 0;
@@ -37,7 +37,7 @@ p {
             document.getElementById("score").innerHTML = "Score: " + score;
             document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
             document.getElementById("gid").style.width = "180px";
-            setTimeout(100, function(){document.getElementById.style.width = "200px";});
+            setTimeout(500, function(){document.getElementById.style.width = "200px";});
         }
         function buypertti() {
             if (score >= amount) {
