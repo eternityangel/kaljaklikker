@@ -41,8 +41,6 @@ p {
             score = score + 1;
             document.getElementById("score").innerHTML = "Score: " + score;
             document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
-            document.getElementById("gid").style.width = "190px";
-            setTimeout(clicka, 50);
             
         }
         function buypertti() {
@@ -57,7 +55,11 @@ p {
             }
             
         }
-        document.getElementById("gid").addEventListener("click", setScore);
+        document.getElementById("gid").addEventListener("mousedown", function(){
+            setScore();
+            document.getElementById("gid").style.width = "190px";
+            setTimeout(clicka, 50);
+        });
         document.getElementById("buypertti").addEventListener("click", buypertti);
         document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
     </script>
