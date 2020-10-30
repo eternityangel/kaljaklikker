@@ -34,6 +34,9 @@ p {
         let score = 0;
         let amount = 3;
         let perttilevel = 0;
+        function clicka() {
+            document.getElementById("gid").style.width = "200px";
+        }
         function setScore() {
             score = score + 1;
             document.getElementById("score").innerHTML = "Score: " + score;
@@ -41,9 +44,6 @@ p {
             document.getElementById("gid").style.width = "180px";
             setTimeout(clicka, 500);
             
-        }
-        function clicka() {
-            document.getElementById("gid").style.width = "200px";
         }
         function buypertti() {
             if (score >= amount) {
