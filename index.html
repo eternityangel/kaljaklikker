@@ -27,7 +27,7 @@ p {
     <p id="score">Score: 0</p><br>
     <p id="buypertti">Buy Pertti (3 Score) lvl: 0</p>
     <div class="click">
-        <img id="gid" src="RarhuEiCopyright.png">
+        <img id="gid" onmousedown="gidDown()" src="RarhuEiCopyright.png">
     </div>
     <script type="text/javascript">
         document.getElementById("gid").style.width = "200px";
@@ -55,11 +55,11 @@ p {
             }
             
         }
-        document.getElementById("gid").addEventListener("mousedown", function(){
+        function gidDown(){
             setScore();
             document.getElementById("gid").style.width = "190px";
             setTimeout(clicka, 50);
-        });
+        }
         document.getElementById("buypertti").addEventListener("click", buypertti);
         document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
     </script>
