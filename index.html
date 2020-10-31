@@ -16,7 +16,7 @@
 .menu {
     height: 0vh;
     background-color: black;
-    position: absolute;
+    margin-top: -100px;
 }
 .main {
     
@@ -77,6 +77,7 @@ h3.score {
         }
         function menuDown(){
             document.getElementById("menu").style.height = "50vh";
+            document.getElementById("menu").style.marginTop = "0px";
         }
         document.getElementById("buypertti").addEventListener("click", buypertti);
         document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
