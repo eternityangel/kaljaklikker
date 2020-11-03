@@ -73,13 +73,14 @@ h3.score {
         function gidDown(){
             setScore();
             document.getElementById("gid").style.width = "190px";
+            clicka();
         }
         function menuDown(){
             document.getElementById("menu").style.height = "50vh";
             document.getElementById("menu").style.marginTop = "0px";
         }
         document.getElementById("buypertti").addEventListener("click", buypertti);
-        document.getElementById("gid").addEventListener("click", setScore);
+        document.getElementById("gid").addEventListener("click", gidDown);
         document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
     </script>
 
