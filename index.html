@@ -62,7 +62,7 @@ h3.score {
             if (score >= amount) {
                 
                 score -= amount;
-                amount = (amount * 1.5) / 2;
+                amount = amount + 52;
                 document.getElementById("buypertti").innerHTML = "Buy Pertti (" + amount + " Score) lvl: " + perttilevel;
                 perttilevel = perttilevel + 1;
                 setInterval(setScore, 10000);
